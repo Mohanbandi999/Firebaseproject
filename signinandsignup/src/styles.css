@@ -1,0 +1,25 @@
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.form-container{
+    display: block;
+    max-width: 300px;
+    margin:auto;
+
+    background: rgba(79, 13, 202, 0.041);
+    padding: 48px;
+    border-radius: 16px;
+}
+.form-container mat-form-field{
+    width: 100%;
+}
+.center{
+    display:flex;
+    justify-content: center;
+}
+
+.margin-top{
+    margin-top:16px;
+}
+.text-center{
+    text-align:center;
+}

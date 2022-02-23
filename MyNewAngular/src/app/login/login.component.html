@@ -1,4 +1,13 @@
-<h2>Login</h2>
+
+<div>
+    <mat-toolbar color="primary">
+        <span class="fill-remaining-space"></span>
+        <span>Softblobs Employee Information</span>
+        <span class="fill-remaining-space"></span>
+      </mat-toolbar>
+    </div>
+      <h2>Login</h2> 
+
 <form [formGroup]="loginForm" (ngSubmit)="Login()">
     <div class="form-group">
         <label for="username">Username</label>
@@ -6,7 +15,7 @@
         <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
             <div *ngIf="f.username.errors.required">Username is required</div>
         </div>
-    </div>
+    </div><br>
     <div class="form-group">
         <label for="password">Password</label>
         <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
@@ -19,6 +28,13 @@
             <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
             Login
         </button>
-        <a routerLink="/register" class="btn btn-link">Register</a>
+        <a routerLink="/employee-list" class="btn btn-link">Register</a>
     </div>
 </form>
+<mat-toolbar color="primary">
+    <span class="fill-remaining-space"></span>
+    <span>******</span>
+    <span class="fill-remaining-space"></span>
+</mat-toolbar>
+
+

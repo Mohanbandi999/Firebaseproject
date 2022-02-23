@@ -2,16 +2,16 @@
     <thead>
       <th>Number</th>
       <th>Username</th>
-      <th>Role</th>
-      <th>Address</th>
+      <th>email</th>
+      <th>firstName</th>
     </thead>
     <tbody>
       <tr *ngFor="let employee of employees">
   
         <td>{{employee.id}}</td>
         <td>{{employee.username}}</td>
-        <td>{{employee.role}}</td>
-        <td>{{employee.address}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.firstName}}</td>
         <td>
             <button (click)="delete(employee.id)">Delete</button>
         </td>

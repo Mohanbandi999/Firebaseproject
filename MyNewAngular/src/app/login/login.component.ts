@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 
 @Component({
@@ -16,7 +17,9 @@ export class LoginComponent implements OnInit {
     submitted = false;
     returnUrl:any;
   constructor(private formBuilder: FormBuilder,
-    private authenticationservice:AuthenticationService) { }
+    private authenticationservice:AuthenticationService,
+    private router : Router
+    ) { }
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
@@ -26,8 +29,8 @@ export class LoginComponent implements OnInit {
   }
   get f() { return this.loginForm.controls; }
   Login() {
-    this.authenticationservice.loginwithusername(this.username, this.password)
-    
+    //this.authenticationservice.SetUserData(this.loginForm.value)
+    this.router.navigateByUrl("employee-list");
   }
 
 

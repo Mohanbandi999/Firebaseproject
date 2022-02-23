@@ -1,0 +1,50 @@
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+        <button mat-button class="menu-button">
+            <mat-icon>info</mat-icon>
+            <span>Details</span>
+        </button>
+        <button mat-button class="menu-button" (click)="addEmployee()">
+            <mat-icon>create</mat-icon>
+            <span>Add Employee</span>
+        </button>
+        <button mat-button class="menu-button" (click)="Getusers()" >
+            <mat-icon>list</mat-icon>
+            <span>Employee List</span>
+        </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z4">
+            <table>
+                <thead>
+                  <th>Firstname</th>
+                  <th>Lastname</th>
+                  <th>Email</th>
+                  <th>Role</th>
+                  <th>Mobile</th>
+
+                  <th>Action</th>
+                  <th>Action</th>
+
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+
+                        <td>{{user.firstName}}</td>
+                        <td>{{user.lastName}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.role}}</td>
+                        <td>{{user.phone}}</td>
+                        <td>
+                            <button mat-button color="warn"   (click)="delete(users.uid)">Delete</button>
+                        </td>
+                        <td>
+                            <button mat-button color="warn"  (click)="modify(users.uid)">Modify</button>
+                        </td>                         
+                      </tr>                                           
+                </tbody>
+              </table>
+        </div>                           
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
